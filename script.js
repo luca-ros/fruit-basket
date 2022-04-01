@@ -92,12 +92,38 @@ console.log("vitesse moyenne: " + Math.round(vitesseMoyenne*100)/100 + " km/h");
 // Etat civil
 // let femmeAge = ()
 const nocesDor = 50;
-const nonna = 18 + nocesDor;
-const nonno = (18/3)*4 + nocesDor;
-console.log("La femme a "+ nonna + " ans"+" et l’homme "+nonno+" ans.")
+const nonnaAge = 18 + nocesDor;
+const nonnoAge = (18/3)*4 + nocesDor;
+console.log("La femme a "+ nonnaAge + " ans"+" et l’homme "+nonnoAge+" ans.")
 
 
 // 7. Lille-Marseille
+
+let distance = 1000;
+let departTime = moment('2014-02-04 09:00:00');          
+let trainsSpeed = 100;
+let moucheSpeed = 150;
+
+let tempTrajetsTrains = distance/trainsSpeed;              
+
+let arriveeTime = departTime.add(tempTrajetsTrains, 'hours');   
+
+let halfTime = tempTrajetsTrains / 2;
+let TrajetMouche = halfTime * moucheSpeed;
+
+
+
+// console.log(halfTime)
+
+// https://momentjs.com/guides/
+
+
+
+console.log(tempTrajetsTrains + "h de trajet")
+console.log("Les trains arrive le" + arriveeTime.format(' D MMMM [a] h:mm a'))
+console.log("La mouche a parcurue " + TrajetMouche + " Km")
+
+
 
 // Lille et Marseille sont séparées par un chemin de fer long de 1000km. 
 
